@@ -6,18 +6,11 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import kay.kayMoarPowa.Gui.ECraftingGUI;
-import kay.kayMoarPowa.Gui.GuiHandler;
 import kay.kayMoarPowa.Init.ModBlocks;
 import kay.kayMoarPowa.Init.ModItems;
 import kay.kayMoarPowa.Init.Registry;
 import kay.kayMoarPowa.common.Config;
 import kay.kayMoarPowa.lib.Reference;
-import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
@@ -37,6 +30,7 @@ public class kayMoarPowa
         ModItems.init();
         ModBlocks.init();
         Registry.registry();
+
     }
 
     @EventHandler
@@ -44,13 +38,11 @@ public class kayMoarPowa
     {
         event.getModState();
         System.out.println("Initialized");
-        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        System.out.println("Mandrake's Mother Sucks");
         event.getModState();
     }
 }
