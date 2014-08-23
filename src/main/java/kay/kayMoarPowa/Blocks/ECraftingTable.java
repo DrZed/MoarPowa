@@ -1,6 +1,6 @@
 package kay.kayMoarPowa.Blocks;
 
-import kay.kayMoarPowa.*;
+import kay.kayMoarPowa.kayMoarPowa;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

@@ -1,17 +1,15 @@
 package kay.kayMoarPowa;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import kay.kayMoarPowa.Blocks.ECraftingTable;
-import kay.kayMoarPowa.Init.ModBlocks;
-import kay.kayMoarPowa.Init.ModItems;
-import kay.kayMoarPowa.lib.Reference;
-import kay.kayMoarPowa.common.Config;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.event.*;
-import net.minecraft.block.Block;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import kay.kayMoarPowa.Init.ModBlocks;
+import kay.kayMoarPowa.Init.ModItems;
+import kay.kayMoarPowa.common.Config;
+import kay.kayMoarPowa.lib.Reference;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;

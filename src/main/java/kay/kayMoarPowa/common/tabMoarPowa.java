@@ -2,7 +2,6 @@ package kay.kayMoarPowa.common;
 
 import kay.kayMoarPowa.kayMoarPowa;
 import net.minecraft.creativetab.CreativeTabs;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 
 public class tabMoarPowa extends CreativeTabs

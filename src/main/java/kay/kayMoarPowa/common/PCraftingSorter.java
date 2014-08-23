@@ -1,7 +1,8 @@
 package kay.kayMoarPowa.common;
 
-import java.util.Comparator;
 import net.minecraft.item.crafting.IRecipe;
+
+import java.util.Comparator;
 
 public class PCraftingSorter implements Comparator
 {
