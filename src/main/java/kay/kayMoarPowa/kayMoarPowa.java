@@ -2,11 +2,8 @@ package kay.kayMoarPowa;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import kay.kayMoarPowa.Blocks.ECraftingTable;
+import kay.kayMoarPowa.Init.ModBlocks;
 import kay.kayMoarPowa.Init.ModItems;
-import kay.kayMoarPowa.Items.CompactBattery;
-import kay.kayMoarPowa.Items.DenseBattery;
-import kay.kayMoarPowa.Items.MajorBattery;
-import kay.kayMoarPowa.Items.MassiveBattery;
 import kay.kayMoarPowa.lib.Reference;
 import kay.kayMoarPowa.common.Config;
 
@@ -30,16 +27,8 @@ public class kayMoarPowa
     public static GuiContainer ECraftingGUI;
     public static Config Config;
 
-    public static Block ECraftingTable;
 
-    public static Item BasicBattery;
-    public static Item MinorBattery;
-    public static Item SecondaryBattery;
-    public static Item TertiaryBattery;
-    public static Item CompactBattery;
-    public static Item MajorBattery;
-    public static Item DenseBattery;
-    public static Item MassiveBattery;
+
 
     public static CreativeTabs tabMoarPowa = new CreativeTabs("tabMoarPowa") {
         @Override
@@ -55,6 +44,7 @@ public class kayMoarPowa
         event.getModState();
         Config = new Config(new Configuration(event.getSuggestedConfigurationFile()));
         ModItems.init();
+        ModBlocks.init();
 
     }
 
@@ -63,16 +53,6 @@ public class kayMoarPowa
     {
         event.getModState();
         System.out.println("Initialized");
-        BasicBattery = new Item().setCreativeTab(kayMoarPowa.tabMoarPowa);
-        MinorBattery = new Item();
-        SecondaryBattery = new Item();
-        TertiaryBattery = new Item();
-        CompactBattery = new Item();
-        MajorBattery = new Item();
-        DenseBattery = new Item();
-        MassiveBattery = new Item();
-        ECraftingTable = new ECraftingTable();
-        GameRegistry.registerBlock(ECraftingTable, "ECraftingTable");
     }
     
     @EventHandler
