@@ -2,6 +2,7 @@ package kay.kayMoarPowa;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import kay.kayMoarPowa.Blocks.ECraftingTable;
+import kay.kayMoarPowa.Init.ModItems;
 import kay.kayMoarPowa.Items.CompactBattery;
 import kay.kayMoarPowa.Items.DenseBattery;
 import kay.kayMoarPowa.Items.MajorBattery;
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.event.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 
@@ -42,7 +44,7 @@ public class kayMoarPowa
     public static CreativeTabs tabMoarPowa = new CreativeTabs("tabMoarPowa") {
         @Override
         public Item getTabIconItem() {
-            return null;
+            return Items.apple;
         }
     };
 
@@ -52,6 +54,7 @@ public class kayMoarPowa
         System.out.println("Initializing");
         event.getModState();
         Config = new Config(new Configuration(event.getSuggestedConfigurationFile()));
+        ModItems.init();
 
     }
 

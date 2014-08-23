@@ -1,4 +1,4 @@
-package com.kay.kayMoreWorldGen.common;
+package kay.kayMoarPowa.common;
 
 import kay.kayMoarPowa.kayMoarPowa;
 import net.minecraft.creativetab.CreativeTabs;
