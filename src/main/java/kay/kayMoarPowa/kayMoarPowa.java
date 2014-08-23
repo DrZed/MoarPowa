@@ -6,8 +6,12 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import kay.kayMoarPowa.Gui.ECraftingGUI;
+import kay.kayMoarPowa.Gui.GuiHandler;
 import kay.kayMoarPowa.Init.ModBlocks;
 import kay.kayMoarPowa.Init.ModItems;
+import kay.kayMoarPowa.Init.Registry;
 import kay.kayMoarPowa.common.Config;
 import kay.kayMoarPowa.lib.Reference;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -22,18 +26,7 @@ public class kayMoarPowa
 {
     @Instance(Reference.MOD_ID)
     public static kayMoarPowa instance;
-    public static GuiContainer ECraftingGUI;
     public static Config Config;
-
-
-
-
-    public static CreativeTabs tabMoarPowa = new CreativeTabs("tabMoarPowa") {
-        @Override
-        public Item getTabIconItem() {
-            return Items.apple;
-        }
-    };
 
     @EventHandler
     public void preinit(FMLPreInitializationEvent event)
@@ -43,7 +36,7 @@ public class kayMoarPowa
         Config = new Config(new Configuration(event.getSuggestedConfigurationFile()));
         ModItems.init();
         ModBlocks.init();
-
+        Registry.registry();
     }
 
     @EventHandler
@@ -51,11 +44,13 @@ public class kayMoarPowa
     {
         event.getModState();
         System.out.println("Initialized");
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        System.out.println("Mandrake's Mother Sucks");
         event.getModState();
     }
 }
