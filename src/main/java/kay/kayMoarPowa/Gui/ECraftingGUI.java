@@ -5,6 +5,7 @@ import kay.kayMoarPowa.common.Textures;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
@@ -22,9 +23,8 @@ public class ECraftingGUI extends GuiContainer
 
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-//        this.fontRenderer.drawString(StatCollector.translateToLocal("\u00a76Better"), 120, 5, 0x404040);
-//        this.fontRenderer.drawString(StatCollector.translateToLocal("\u00a76Crafting"), 116, 20, 0x404040);
-//        this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 96 - 14, 0x404040);
+        this.fontRendererObj.drawString(StatCollector.translateToLocal("\u00a76MOAR"), 120, 5, 0x404040);
+        this.fontRendererObj.drawString(StatCollector.translateToLocal("\u00a76POWA"), 116, 20, 0x404040);
     }
 
     @Override
