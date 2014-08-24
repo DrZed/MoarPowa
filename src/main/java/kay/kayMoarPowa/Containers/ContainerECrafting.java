@@ -18,7 +18,7 @@ public class ContainerECrafting extends Container
     private int posY;
     private int posZ;
 
-    public ContainerECrafting(InventoryPlayer inventoryplayer, World world, int i, int j, int k)
+    public ContainerECrafting(EntityPlayer player, World world, int i, int j, int k)
     {
         craftMatrix = new InventoryCrafting(this, 5, 5);
         craftResult = new InventoryCraftResult();
@@ -26,7 +26,7 @@ public class ContainerECrafting extends Container
         posX = i;
         posY = j;
         posZ = k;
-        this.addSlotToContainer(new SlotCrafting(inventoryplayer.player, craftMatrix, craftResult, 0, 131, 36));
+        this.addSlotToContainer(new SlotCrafting(player, craftMatrix, craftResult, 0, 131, 36));
         for(int l = 0; l < 5; l++)
         {
             for(int k1 = 0; k1 < 5; k1++)
@@ -40,14 +40,14 @@ public class ContainerECrafting extends Container
         {
             for(int l1 = 0; l1 < 9; l1++)
             {
-                this.addSlotToContainer(new Slot(inventoryplayer, l1 + i1 * 9 + 9, 8 + l1 * 18, 94 + i1 * 18));
+                this.addSlotToContainer(new Slot(player.inventory, l1 + i1 * 9 + 9, 8 + l1 * 18, 94 + i1 * 18));
             }
 
         }
 
         for(int j1 = 0; j1 < 9; j1++)
         {
-            this.addSlotToContainer(new Slot(inventoryplayer, j1, 8 + j1 * 18, 148));
+            this.addSlotToContainer(new Slot(player.inventory, j1, 8 + j1 * 18, 148));
         }
 
         onCraftMatrixChanged(craftMatrix);

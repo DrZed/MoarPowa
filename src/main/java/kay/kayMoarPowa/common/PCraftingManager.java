@@ -1,16 +1,17 @@
 package kay.kayMoarPowa.common;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import kay.kayMoarPowa.Init.ModItems;
+import kay.kayMoarPowa.Items.Battery;
 import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PCraftingManager
 {
@@ -26,14 +27,15 @@ public class PCraftingManager
     private PCraftingManager()
     {
         recipes = new ArrayList();
-
+        this.addBuilderShapelessRecipe(new ItemStack(ModItems.itemBattery, 1, 0),  new Object[] { "PSZSP", "PXP","", 'P', Items.iron_ingot, 'S', Items.stick, 'Z', Items.gold_ingot, 'X', Items.diamond});
+        this.createRecipe(new ItemStack(ModItems.itemBattery, 1, 0), "C", "S", 'C', Items.coal, 'S', Items.stick);
         //This is where your recipes will go
 
         Collections.sort(this.recipes, new PCraftingSorter(this));
         System.out.println(this.recipes.size() + " recipes");
     }
 
-    public PShapedRecipe func_92051_a(ItemStack par1ItemStack, Object ... par2ArrayOfObj)
+    public PShapedRecipe createRecipe(ItemStack par1ItemStack, Object ... par2ArrayOfObj)
     {
         String var3 = "";
         int var4 = 0;

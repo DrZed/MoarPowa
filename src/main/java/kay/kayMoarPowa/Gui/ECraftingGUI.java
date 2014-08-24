@@ -3,15 +3,16 @@ package kay.kayMoarPowa.Gui;
 import kay.kayMoarPowa.Containers.ContainerECrafting;
 import kay.kayMoarPowa.common.Textures;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
 public class ECraftingGUI extends GuiContainer
 {
-    public ECraftingGUI(InventoryPlayer inventoryplayer, World world, int i, int j, int k)
+    public ECraftingGUI(EntityPlayer player, World world, int i, int j, int k)
     {
-        super(new ContainerECrafting(inventoryplayer, world, i, j, k));
+        super(new ContainerECrafting(player, world, i, j, k));
     }
 
     public void onGuiClosed()
