@@ -27,8 +27,13 @@ public class PCraftingManager
     private PCraftingManager()
     {
         recipes = new ArrayList();
+<<<<<<< HEAD
         this.addBuilderShapelessRecipe(new ItemStack(ModItems.itemBattery, 1, 0),  new Object[] { "PSZSP", "PXP","", 'P', Items.iron_ingot, 'S', Items.stick, 'Z', Items.gold_ingot, 'X', Items.diamond});
         this.createRecipe(new ItemStack(ModItems.itemBattery, 1, 0), "C", "S", 'C', Items.coal, 'S', Items.stick);
+=======
+        this.createRecipe(new ItemStack(ModItems.itemBattery, 1, 0),  new Object[] { "PSZSP", "PXP", 'P', Items.iron_ingot, 'S', Items.stick, 'Z', Items.gold_ingot, 'X', Items.diamond});
+
+>>>>>>> origin/master
         //This is where your recipes will go
 
         Collections.sort(this.recipes, new PCraftingSorter(this));
