@@ -38,3 +38,8 @@ Icon
 
 .gitignore
 src/main/java/cofh/api
+MoarPowaFix.ipr
+MoarPowaFix.iml
+gradlew.bat
+MoarPowaFix.iws
+gradlew

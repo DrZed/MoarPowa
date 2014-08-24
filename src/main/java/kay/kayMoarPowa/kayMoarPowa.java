@@ -12,7 +12,9 @@ import kay.kayMoarPowa.Init.ModBlocks;
 import kay.kayMoarPowa.Init.ModItems;
 import kay.kayMoarPowa.Init.Registry;
 import kay.kayMoarPowa.common.Config;
+import kay.kayMoarPowa.common.Crafting;
 import kay.kayMoarPowa.lib.Reference;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.common.config.Configuration;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
@@ -32,7 +34,6 @@ public class kayMoarPowa
         ModItems.init();
         ModBlocks.init();
         Registry.registry();
-
     }
 
     @EventHandler
