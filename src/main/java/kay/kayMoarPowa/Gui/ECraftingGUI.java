@@ -24,7 +24,7 @@ public class ECraftingGUI extends GuiContainer
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
         this.fontRendererObj.drawString(StatCollector.translateToLocal("\u00a76M\u00a73O\u00a76A\u00a73R"), 120, 5, 0x404040);
-        this.fontRendererObj.drawString(StatCollector.translateToLocal("\u00a76M\u00a73O\u00a76A\u00a73R"), 120, 20, 0x404040);
+        this.fontRendererObj.drawString(StatCollector.translateToLocal("\u00a76P\u00a73O\u00a76W\u00a73A"), 120, 20, 0x404040);
     }
 
     @Override
