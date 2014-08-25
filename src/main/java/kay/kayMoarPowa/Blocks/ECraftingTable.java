@@ -50,13 +50,11 @@ public class ECraftingTable extends BlockContainer
     public void registerBlockIcons(IIconRegister iconRegister){
         blockIcons = new IIcon[256];
 
-        blockIcons[0] = iconRegister.registerIcon(Reference.MOD_ID + ":textures/blocks/CT_bottom");
-        blockIcons[1] = iconRegister.registerIcon(Reference.MOD_ID + ":textures/blocks/CT_top");
-        blockIcons[2] = iconRegister.registerIcon(Reference.MOD_ID + ":textures/blocks/CT_side");
+        blockIcons[0] = iconRegister.registerIcon(Reference.MOD_ID + ":CT_bottom");
+        blockIcons[1] = iconRegister.registerIcon(Reference.MOD_ID + ":CT_top");
+        blockIcons[2] = iconRegister.registerIcon(Reference.MOD_ID + ":CT_side");
     }
-
     @Override
-    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int Side, int Metadata){
         if(Side == 0){
             return blockIcons[0];
