@@ -1,5 +1,4 @@
-MoarPowa
+HxCTech
 ========
 
-DrZeds Moar Powa Don't Use Currently  broken being created
-Only for use on OPCraft server using KarelPack
+DrZeds HxCTech WIP Not runnable ATM
